@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "Festive";
+  src: local("Festive"),
+   url(~assets/fonts/Festive-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Zen";
+  src: local("Zen"),
+   url(~assets/fonts/Zen.ttf) format("truetype");
+}
+*,
+*::before,
+*::after {
+  outline: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#__nuxt,
+#__layout {
+  position: relative;
+  margin: 0;
+  height: auto;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  background-color: #dbd9cd;
+}
+// #__nuxt {
+//   transform: skew(0deg, -10deg);
+// }
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+a {
+  outline: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  background: transparent;
+  transition: 0.3s;
+  cursor: pointer;
+
+  // &:active,
+  // &:hover {
+  //   color: lighten($blue, 20%) !important;
+  // }
+
+  &[disabled] {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  &.large {
+    font-size: 28px;
+    line-height: 44px;
+  }
+}
+
+ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}
+
+textarea {
+  border: none;
+  width: 100%;
+  resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
+
+textarea,
+input {
+  appearance: none;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+textarea,
+input,
+select {
+  border-radius: 0;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &::-moz-focus-inner {
+    border: 0 !important;
+  }
+
+  &:active,
+  &:focus {
+    outline: none !important;
+  }
+
+  &[disabled] {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
+
+p {
+  word-break: break-word !important;
+}
+
+.festive {
+  font-family: 'Festive';
+  font-size: 54px;
+  letter-spacing: 2px;
+  opacity: .5;
+  font-weight: 300;
+}
+
