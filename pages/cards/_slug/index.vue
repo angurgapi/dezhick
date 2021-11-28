@@ -21,13 +21,13 @@ export default {
     return {
         list: [
         {
-          slug: 'joy', pics: ['joy1', 'joy2'], title: 'JOY VIBE'
+          slug: 'joy', pics: [1,2,3,4,5,6,7,8], title: 'JOY VIBE'
         },
         {
-          slug: 'chill', pics: ['chill1', 'chill2', 'chill4', 'chill3'], title: 'CHILL VIBE'
+          slug: 'chill', pics: [1,2,3,4,5,6], title: 'CHILL VIBE'
         },
         {
-          slug: 'other', pics: ['other1', 'other2', 'other3'], title: '//OTHER'
+          slug: 'other', pics: [1,2,3,4], title: '//OTHER'
         }
       ],
     
@@ -51,6 +51,7 @@ export default {
   align-items: center;
   justify-content: center;
   &__header {
+    margin-top: 100px;
     height: 85px;
     letter-spacing: 3px;
     font-family: 'Zen';

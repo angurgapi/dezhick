@@ -6,10 +6,10 @@
                 <a class="contact__link" href="https://www.instagram.com/dezhick/">
                     <font-awesome-icon class="contact__icon" :icon="['fab', 'instagram']" />
                 </a>
-                <a class="contact__link" href="https://www.instagram.com/dezhick/">
+                <a class="contact__link" href="https://t.me/dezhick">
                     <font-awesome-icon class="contact__icon" :icon="['fab', 'telegram']" />
                 </a>
-                <a class="contact__link" href="https://www.instagram.com/dezhick/">
+                <a class="contact__link" href="mailto:dezhkoyulia@gmail.сom">
                     <font-awesome-icon class="contact__icon" :icon="['fas', 'envelope']" />
                 </a>
             </div>
@@ -23,7 +23,7 @@
 .contact {    
   &__box {
     width: 100%;
-    padding: 100px 20px 30px 20px;
+    padding: 50px 20px 30px 20px;
     background: linear-gradient(180deg,#dbd9cd, #5c5d5e);
     text-align: center;
 

@@ -1,6 +1,6 @@
 <template>
     <div v-show="visible" class="carousel-slide">
-        <img class="carousel-slide__img" :src="`/pics/${pic}.jpg`" />
+        <img class="carousel-slide__img" :src="`/pics/${folder}/${pic}.jpg`" />
     </div>
 </template>
 
@@ -10,6 +10,10 @@ export default {
     name: 'CarouselSlide',
     props: {
         pic: {
+            type: [String, Number],
+            required: true,
+        },
+        folder: {
             type: String,
             required: true,
         },

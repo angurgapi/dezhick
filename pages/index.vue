@@ -40,7 +40,7 @@ export default {
           id: 3, label: '//OTHER', slug: 'other'
         }
       ],
-      email: 'juliadezhko@gmail.com'
+      email: 'dezhkoyulia@gmail.сom'
     }
   },
   methods: {
@@ -144,6 +144,9 @@ export default {
   }
 }
 @media(max-width: 700px) {
+  .intro__content {
+    flex-direction: column;
+  }
   .grid {
     grid-template-columns: 1fr;
     font-size: 14px;

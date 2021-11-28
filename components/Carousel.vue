@@ -3,7 +3,7 @@
     <button class="carousel__button carousel__button--prev" @click="getPreviousSlide">
       <font-awesome-icon class="carousel__icon" :icon="['fas', 'arrow-circle-left']" />
     </button>
-    <CarouserlSlide v-for="pic, index in section.pics" :key="pic.index" :pic="pic" :visible="index === activeSlide" />
+    <CarouserlSlide v-for="pic, index in section.pics" :key="pic.index" :pic="pic" :folder="section.slug" :visible="index === activeSlide" />
     <button class="carousel__button carousel__button--next" @click="getNextSlide">
       <font-awesome-icon class="carousel__icon" :icon="['fas', 'arrow-circle-right']" />
     </button>
