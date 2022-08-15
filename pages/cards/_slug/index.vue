@@ -1,10 +1,12 @@
 <template>
+<div class="page-wrapper__content">
     <div class="section">
       <div class='section__header'>
 		  	<h2 class='section__title' ref='title'>{{ getCurrentSection.title }}</h2>			
 		  </div>
       <Carousel :section="getCurrentSection" />
     </div>
+</div>
 </template>
 
 
@@ -45,7 +47,7 @@ export default {
 .section {
   height: 100%;
   padding-top: 100px;
-  padding: 0 20px 20px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

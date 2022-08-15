@@ -17,17 +17,9 @@ html
   box-sizing: border-box
   margin: 0
 
-
-.page-wrapper
-  width: 100%
-  height: 100vh
-  margin: 0
-  display: flex
-  flex-direction: column
-
 h2
   text-align: center
-  margin: auto
+
 
 </style>
 

@@ -1,9 +1,11 @@
 <template>      
     <div class="navbar">
-        <nuxt-link to="/">
-           <font-awesome-icon :icon="['fas', 'home']" />
+        <nuxt-link class="navbar__link" to="/">
+           <font-awesome-icon :icon="['fas', 'home']" />about
         </nuxt-link>
-        <button class="navbar__btn" @click="scrollToContact">Contact</button>
+       <nuxt-link class="navbar__link" to="/contacts">
+           <font-awesome-icon :icon="['fas', 'envelope']" />contact
+        </nuxt-link>
       </div>
 </template>
 
@@ -28,28 +30,31 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  padding: 20px 30px;
+  padding: 20px 18px;
   box-shadow: 0 4px 6px -2px rgba(0,0,0,.3);
-  &__btn {
-    margin-left: 20px;
-    text-decoration: none;
-    font-family: 'Courier New';
-    text-transform: uppercase;
-    color: rgba(0,0,0,.7);
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 300;
-    margin-right: 20px;
+  font-size: 24px;
+  @media(max-width: 800px) {
+    font-size: 18px;
   }
-  .nuxt-link-exact-active {
-    color: rgba(0,0,0,.5);
-  }
+
+  &__link {
+    font-family: 'Zen';
+    opacity: .5;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+    margin-right: 10px;
+    svg { 
+     font-size: 1.2rem;
+     line-height: 1.2rem;
+     margin-right: 4px;  
+    } 
+   }
+
 }
-.nuxt-link, .nuxt-link-active {
-  text-decoration: none;
-  color: rgba(0,0,0,.8);
-}
-svg { 
-  font-size: 32px;
-}
+
+
 </style>

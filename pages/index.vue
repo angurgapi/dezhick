@@ -1,12 +1,14 @@
 <template>
+<div class="page-wrapper__content">
     <div class="intro">
       <div class="intro__header">
         <h2 class="festive">Oh hi there!</h2>
         <div class="intro__content">
           <img class="intro__image" src="/pics/gurl1.jpg" />             
           <div class="intro__text">
-            <p>I figured you might come by. Later you may <a :href="`mailto:${email}`"><b>tell</b></a> me who you are, now I'm gonna tell you who I am. My name is Julia Dzezhko. 
-            I was born and raised in Belarus, studied law and medicine and then got carried away with art. I think the point is to keep it simple & to remind y'all what actually makes our days. By now, I've spent a solid part of my life in Germany, living in various cities. You can imagine I've seen quite a lot...
+            <p>I figured you might come by. Later on you may <a :href="`mailto:${email}`"><b>tell</b></a> me who you are, but right now I'm gonna tell you who I am. <br/> My name is Julia Dzezhko. 
+            I was born and raised in Belarus, studied law and medicine and then got carried away with art. To summarize it all, the point is to keep it simple & to remind y'all what actually makes our days. Also, as you may have noticed, a huuuuuge deal of my art is about self-love. And celebrating life. And cute animals! What could possibly go wrong? 
+            <br/> By now, I've spent a solid part of my life in Germany, living in several different cities and traveling around Europe as much as possible. You can imagine I've seen quite a lot...
             </p>
             <p style="margin-top: 20px">Now what would <b>YOU</b> like to see?</p>
           </div>
@@ -21,6 +23,7 @@
         </div>
       </div>
     </div>
+</div>
 </template>
 
 
@@ -53,7 +56,6 @@ export default {
 
 <style lang='scss'>
 .intro {
-  margin-top: 150px;
   align-items: center;
   justify-content: center;
   padding: 20px; 
