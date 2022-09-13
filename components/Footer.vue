@@ -48,36 +48,41 @@ export default {
 <style lang="scss" scoped>
 .contact {
   background: linear-gradient(180deg, #dbd9cd, #5c5d5e);
-  &__box {
-    width: 100%;
-    padding: 50px 20px 30px 20px;
 
+  &__box {
+    padding: 50px 20px 30px;
+    width: 100%;
     text-align: center;
   }
+
   &__links {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
+
   &__icon {
+    border-radius: 4px;
+    padding: 5px;
     font-size: 34px;
     color: #5c5d5e;
-    padding: 5px;
-    border-radius: 4px;
+
     &:not(last-child) {
       margin-right: 20px;
     }
+
     &:hover {
       color: #dbd9cd;
       background-color: #5c5d5e;
     }
   }
+
   &__text {
-    color: #dbd9cd;
     margin-top: 30px;
     font-family: 'Zen';
     font-size: 22px;
     letter-spacing: 1px;
+    color: #dbd9cd;
     opacity: 0.6;
   }
 }
