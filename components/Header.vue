@@ -33,7 +33,7 @@ export default {
   padding: 20px 18px;
   width: 100%;
   height: 80px;
-  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 30%);
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 20%);
   font-size: 24px;
   background-color: #dbd9cd;
 
