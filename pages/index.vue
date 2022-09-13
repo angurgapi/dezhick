@@ -1,64 +1,80 @@
 <template>
-<div class="page-wrapper__content">
+  <div class="page-wrapper__content">
     <div class="intro">
       <div class="intro__header">
         <h2 class="festive">Oh hi there!</h2>
         <div class="intro__content">
-          <img class="intro__image" src="/pics/gurl1.jpg" />             
+          <img class="intro__image" src="/pics/gurl1.jpg" />
           <div class="intro__text">
-            <p>I figured you might come by. Later on you may <a :href="`mailto:${email}`"><b>tell</b></a> me who you are, but right now I'm gonna tell you who I am. <br/> My name is Julia Dzezhko. 
-            I was born and raised in Belarus, studied law and medicine and then got carried away with art. To summarize it all, the point is to keep it simple & to remind y'all what actually makes our days. Also, as you may have noticed, a huuuuuge deal of my art is about self-love. And celebrating life. And cute animals! What could possibly go wrong? 
-            <br/> By now, I've spent a solid part of my life in Germany, living in several different cities and traveling around Europe as much as possible. You can imagine I've seen quite a lot...
+            <p>
+              I figured you might come by. Later on you may
+              <a :href="`mailto:${email}`"><b>tell</b></a> me who you are, but
+              right now I'm gonna tell you who I am. <br />
+              My name is Julia Dzezhko. I was born and raised in Belarus,
+              studied law and medicine and then got carried away with art. To
+              summarize it all, the point is to keep it simple & to remind y'all
+              what actually makes our days. Also, as you may have noticed, a
+              huuuuuge deal of my art is about self-love. And celebrating life.
+              And cute animals! What could possibly go wrong? <br />
+              By now, I've spent a solid part of my life in Germany, living in
+              several different cities and traveling around Europe as much as
+              possible. You can imagine I've seen quite a lot...
             </p>
-            <p style="margin-top: 20px">Now what would <b>YOU</b> like to see?</p>
+            <p style="margin-top: 20px">
+              Now what would <b>YOU</b> like to see?
+            </p>
           </div>
         </div>
       </div>
       <div class="grid">
         <div v-for="section in sections" :key="section.id" class="grid__item">
-          <img :src="`/pics/${section.slug}cover.jpg`" />    
+          <img :src="`/pics/${section.slug}cover.jpg`" />
           <div class="middle" @click="goTo(section.slug)">
-            <div class="middle__text">{{section.label}}</div>
-          </div>     
+            <div class="middle__text">{{ section.label }}</div>
+          </div>
         </div>
       </div>
     </div>
-</div>
+  </div>
 </template>
-
-
 
 <script>
 export default {
-  data(){
+  data() {
     return {
       sections: [
         {
-          id: 1, label: 'CHILL VIBE', slug: 'chill'
+          id: 1,
+          label: 'CHILL VIBE',
+          slug: 'chill'
         },
         {
-          id: 2, label: 'JOY VIBE', slug: 'joy'
+          id: 2,
+          label: 'JOY VIBE',
+          slug: 'joy'
         },
         {
-          id: 3, label: '//OTHER', slug: 'other'
+          id: 3,
+          label: '//OTHER',
+          slug: 'other'
         }
       ],
       email: 'dezhkoyulia@gmail.сom'
     }
   },
   methods: {
-    goTo(slug){
+    goTo(slug) {
       this.$router.push(`/cards/${slug}`)
     }
-},
+  }
 }
 </script>
 
-<style lang='scss'>
+<style lang="scss">
 .intro {
   align-items: center;
   justify-content: center;
-  padding: 20px; 
+  padding: 20px;
   &__header {
     display: flex;
     align-items: center;
@@ -80,11 +96,11 @@ export default {
     text-align: justify;
     a {
       font-size: 26px;
-      color: rgba(0,0,0,7);
+      color: rgba(0, 0, 0, 7);
       letter-spacing: 2px;
       text-decoration: underline;
       &:hover {
-        color: rgba(0,0,0,4);
+        color: rgba(0, 0, 0, 4);
         text-decoration: none;
       }
     }
@@ -104,15 +120,15 @@ export default {
     &:hover .middle {
       opacity: 1;
     }
-    box-shadow: 0 4px 6px -2px rgba(0,0,0,.3); 
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
     img {
       width: 25em;
       height: 25em;
-      opacity: .2;
+      opacity: 0.2;
     }
     .middle {
       cursor: pointer;
-      transition: .5s ease;
+      transition: 0.5s ease;
       opacity: 0.6;
       position: absolute;
       top: 50%;
@@ -128,24 +144,23 @@ export default {
     }
   }
 }
-@media(max-width: 1700px) {
+@media (max-width: 1700px) {
   .wrapper {
     font-size: 16px;
   }
 }
 
-@media(max-width: 1300px) {
-
+@media (max-width: 1300px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media(max-width: 1000px) {
-    .wrapper {
+@media (max-width: 1000px) {
+  .wrapper {
     font-size: 12px;
   }
 }
-@media(max-width: 700px) {
+@media (max-width: 700px) {
   .intro__content {
     flex-direction: column;
   }

@@ -1,60 +1,63 @@
-<template>      
-    <div class="navbar">
-        <nuxt-link class="navbar__link" to="/">
-           <font-awesome-icon :icon="['fas', 'home']" />about
-        </nuxt-link>
-       <nuxt-link class="navbar__link" to="/contacts">
-           <font-awesome-icon :icon="['fas', 'envelope']" />contact
-        </nuxt-link>
-      </div>
+<template>
+  <div class="navbar">
+    <nuxt-link class="navbar__link f-row" to="/">
+      <font-awesome-icon :icon="['fas', 'home']" />
+      <span>about</span>
+    </nuxt-link>
+    <nuxt-link class="navbar__link f-row" to="/contacts">
+      <font-awesome-icon :icon="['fas', 'envelope']" />
+      <span>contact</span>
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
-	export default{
-    name: 'Header',
-    methods: {
-      scrollToContact() {
-        document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})
-      }
-    },
-	}
+export default {
+  name: 'Header',
+  methods: {
+    scrollToContact() {
+      document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+}
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .navbar {
   position: fixed;
-  background-color: #dbd9cd;
   z-index: 1100;
-  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   padding: 20px 18px;
-  box-shadow: 0 4px 6px -2px rgba(0,0,0,.3);
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 30%);
   font-size: 24px;
-  @media(max-width: 800px) {
-    font-size: 18px;
-  }
+  background-color: #dbd9cd;
 
   &__link {
+    margin-right: 16px;
+    height: 100%;
     font-family: 'Zen';
-    opacity: .5;
-    color: #000;
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
     font-weight: 600;
-    line-height: 1.2rem;
-    margin-right: 10px;
-    svg { 
-     font-size: 1.2rem;
-     line-height: 1.2rem;
-     margin-right: 4px;  
-    } 
-   }
+    color: #000;
+    opacity: 0.5;
+    transition: 0.4s all ease-in-out;
 
+    span {
+      font-size: 1.2rem;
+    }
+
+    svg {
+      margin-right: 4px;
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    font-size: 18px;
+  }
 }
-
-
 </style>
